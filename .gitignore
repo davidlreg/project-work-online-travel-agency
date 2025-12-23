@@ -3,3 +3,12 @@ docs/
 *.pdf
 *.odt
 *.txt
+
+.vscode/
+
+bin/
+out/
+*.class
+
+.DS_Store
+Thumbs.db
