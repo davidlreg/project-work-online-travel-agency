@@ -1,5 +1,5 @@
 package reisebuero;
 
-public class app {
+public class App {
 
 }
