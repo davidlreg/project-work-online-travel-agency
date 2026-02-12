@@ -23,8 +23,7 @@ public class App {
 
             if (choice.equals("1")) {
 
-                List<Travel> travels =
-                        loader.loadTravels("resources/traveldata.csv");
+                List<Travel> travels = loader.loadTravels("resources/traveldata.csv");
 
                 travelView.showTravels(travels);
 
