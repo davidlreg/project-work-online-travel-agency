@@ -22,8 +22,6 @@ public class Travel {
     // Legt fest, wie die Reise in der Konsole angezeigt wird
     @Override
     public String toString() {
-        return date + " | " + start + " -> " + destination +
-                " | Route: " + route +
-                " | Preis: " + price + " EUR";
+        return date + " | " + start + " -> " + destination + " | Route: " + route + " | Preis: " + price + " EUR";
     }
 }
