@@ -51,6 +51,7 @@ public class CsvTravelLoader {
             // Datei schließen
             reader.close();
 
+            // Ungültige Eingabe behandeln
         } catch (Exception e) {
             System.out.println("Fehler beim Laden der Datei.");
         }
