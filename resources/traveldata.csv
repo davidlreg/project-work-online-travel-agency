@@ -1,13 +1,29 @@
 datum;start;ziel;route;preis_eur
 2026-03-12;Berlin (BER);Barcelona (BCN);DIRECT;189.99
+2026-03-19;Hamburg (HAM);Paris (CDG);DIRECT;159.00
+2026-03-28;München (MUC);Amsterdam (AMS);DIRECT;139.50
 2026-04-05;Frankfurt (FRA);New York (JFK);FRA>AMS>JFK;529.00
+2026-04-12;Düsseldorf (DUS);Madrid (MAD);DIRECT;179.90
+2026-04-18;Stuttgart (STR);Lissabon (LIS);STR>FRA>LIS;229.00
+2026-04-26;Köln/Bonn (CGN);London (LHR);DIRECT;149.99
+2026-05-03;Berlin (BER);Rom (FCO);DIRECT;169.00
+2026-05-10;Leipzig (LEJ);Kopenhagen (CPH);DIRECT;155.75
 2026-05-18;München (MUC);Rom (FCO);DIRECT;149.50
+2026-05-25;Hamburg (HAM);Oslo (OSL);HAM>CPH>OSL;209.40
 2026-06-02;Hamburg (HAM);London (LHR);HAM>AMS>LHR;219.90
+2026-06-08;Frankfurt (FRA);Toronto (YYZ);FRA>LHR>YYZ;579.00
+2026-06-14;Berlin (BER);Helsinki (HEL);BER>ARN>HEL;245.90
 2026-06-20;Düsseldorf (DUS);Istanbul (IST);DIRECT;279.00
+2026-06-27;München (MUC);Athen (ATH);MUC>VIE>ATH;289.99
+2026-07-04;Stuttgart (STR);Zürich (ZRH);DIRECT;119.00
 2026-07-11;Stuttgart (STR);Athen (ATH);STR>VIE>ATH;312.40
+2026-07-18;Frankfurt (FRA);Bangkok (BKK);FRA>DOH>BKK;799.00
+2026-07-25;Berlin (BER);Warschau (WAW);DIRECT;99.90
 2026-08-03;Köln/Bonn (CGN);Lissabon (LIS);DIRECT;199.00
+2026-08-09;Hamburg (HAM);Dublin (DUB);HAM>LHR>DUB;239.50
+2026-08-16;Düsseldorf (DUS);Marrakesch (RAK);DUS>MAD>RAK;349.00
 2026-08-22;Leipzig (LEJ);Stockholm (ARN);LEJ>CPH>ARN;265.75
+2026-08-30;München (MUC);Valencia (VLC);MUC>BCN>VLC;219.90
+2026-09-06;Frankfurt (FRA);San Francisco (SFO);FRA>LHR>SFO;699.00
 2026-09-14;Berlin (BER);Dubai (DXB);BER>IST>DXB;689.99
-2026-10-01;Frankfurt (FRA);Tokio (HND);FRA>DOH>HND;899.00
-2026-11-09;München (MUC);Reykjavík (KEF);MUC>OSL>KEF;349.90
-2026-12-15;Hamburg (HAM);Wien (VIE);DIRECT;129.00
+2026-09-21;Hamburg (HAM);Prag (PRG);DIRECT;129.90
