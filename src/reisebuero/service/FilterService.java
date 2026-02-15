@@ -15,40 +15,40 @@ public class FilterService {
         // Ergebnisliste
         List<Travel> result = new ArrayList<>();
 
-        // Sicherheit: falls keine Liste übergeben wurde
+        // Fehlerbehandlung falls keine Liste übergeben wurde
         if (travels == null) {
             return result;
         }
 
-        // Filtertexte vereinheitlichen (klein + ohne Leerzeichen vorne/hinten)
+        // Filtertexte vereinheitlichen
         String start = (startFilter == null) ? "" : startFilter.trim().toLowerCase();
         String destination = (destinationFilter == null) ? "" : destinationFilter.trim().toLowerCase();
 
-        // Jede Reise prüfen
+        // Jede Reise überprüfen
         for (Travel t : travels) {
 
-            // Start prüfen
+            // Start prüfen wenn ein Kriterium angegeben wurde
             if (!start.isEmpty()) {
                 if (t.start == null || !t.start.toLowerCase().contains(start)) {
                     continue;
                 }
             }
 
-            // Ziel prüfen
+            // Ziel prüfen wenn ein Kriterium angegeben wurde
             if (!destination.isEmpty()) {
                 if (t.destination == null || !t.destination.toLowerCase().contains(destination)) {
                     continue;
                 }
             }
 
-            // Preis prüfen
+            // Preis prüfen wenn ein Kriterium angegeben wurde
             if (maxPrice != null) {
                 if (t.price > maxPrice) {
                     continue;
                 }
             }
 
-            // Wenn alles passt: zur Ergebnisliste hinzufügen
+            // Ergebnis zur Liste hinzufügen
             result.add(t);
         }
 
