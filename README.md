@@ -1,100 +1,78 @@
-# Online Travel Agency – Java Application
+# 🌍 Online Travel Agency (CLI Application)
 
-## Project Description
-
-This project is a Java-based desktop application that simulates a simple **online travel agency**.  
-It is developed as part of an individual university project in the course *Concepts of Programming*.
-
-The application allows users to browse travel offers, filter them by different criteria, add selected trips to a shopping cart, and complete a booking process including the automatic creation of an invoice.
-
-The main objective of this project is to demonstrate a **clear program structure**, the use of **basic object-oriented programming concepts**, and an understandable user interface.
+This project was developed as part of a **Business Informatics project work**. It demonstrates the implementation of a modular Java application focusing on Clean Code principles, the IPO (Input-Process-Output) model, and a strict separation of logic and presentation.
 
 ---
 
-## Functional Requirements
+## 📖 Project Overview
+The application is a console-based travel booking system. it allows users to load travel offers from an external data source, filter them, and go through the entire process from the shopping cart to final invoicing.
 
-The application fulfills the following requirements:
-
-- Travel offers are loaded from an external CSV file at application startup  
-- At least 10 travel offers are available  
-- Each travel offer contains:
-  - Travel date
-  - Departure location
-  - Destination
-  - Flight route (direct or with stopovers)
-  - Price
-
-- All available travel offers are displayed after system startup  
-- Travel offers can be filtered by:
-  - Price
-  - Departure location
-  - Destination
-
-- Users can select multiple travel offers and add them to a shopping cart  
-- The shopping cart can be reviewed and a booking can be completed  
-- After booking, an invoice containing the travel details is automatically generated and displayed  
-- The application provides feedback for incorrect user input and explains correct usage
+### Core Features
+* **Dynamic Data Import**: Reading travel data from a semicolon-separated CSV file (`traveldata.csv`).
+* **Smart Filter Logic**: Search for destinations and price ceilings.
+* **Shopping Cart Management**: Adding trips with automatic total price calculation.
+* **Structured Invoicing**: Generating an overview of all booked services.
+* **Robustness**: Implementation of exception handling to prevent program crashes during invalid inputs.
 
 ---
 
-## Project Structure
+## 🏗 Software Architecture
+The application follows a clear layer separation to ensure maintainability and extensibility:
 
-The application follows a simple and understandable structure to separate responsibilities:
 
-- **model**  
-  Contains data classes representing travel information
 
-- **data**  
-  Handles loading travel offers from a CSV file
-
-- **service**  
-  Contains the business logic, such as filtering, cart management, and booking
-
-- **ui**  
-  Responsible for the graphical user interface and user interaction
-
-This structure improves readability and makes the application easier to understand, especially for beginners.
+* **`model`**: Contains the domain model (`Travel.java`) as a POJO (Plain Old Java Object).
+* **`service`**: Includes the business logic (`FilterService`, `CartService`, `BookingService`).
+* **`ui`**: Encapsulates the entire presentation logic for the command-line interface (CLI).
+* **`data`**: Responsible for the persistence layer and data access (`CsvTravelLoader`).
 
 ---
 
-## User Interface
+## 📂 Project Structure
+```text
+src/reisebuero/
+├── data/       # Data access (CSV parsing)
+├── model/      # Data models (Travel class)
+├── service/    # Business logic & state management
+├── ui/         # User interface (MainView, ListView, CartView)
+└── App.java    # Main entry point & Controller
+resources/
+└── traveldata.csv # Data source for travel offers
+```
 
-The application provides a graphical user interface that allows users to:
+🛠 Installation & Execution
+Prerequisites
+Java Development Kit (JDK) version 17 or higher.
 
-- View all available travel offers in a structured list
-- Apply filters using input fields
-- Add selected travel offers to a shopping cart
-- Review the shopping cart
-- Complete a booking and view the generated invoice
+A terminal or an IDE (e.g., VS Code, IntelliJ).
 
-The interface is designed to be intuitive and suitable for users without technical background.
+Running the Application
+Clone the repository:
 
----
+```
+Bash
+git clone [https://github.com/davidlreg/project-work-online-travel-agency.git](https://github.com/davidlreg/project-work-online-travel-agency.git)
+```
+Navigate to the directory:
 
-## Technologies Used
+```
+Bash
+cd project-work-online-travel-agency
+```
+Compile (from the src folder):
 
-- Java  
-- JavaFX (graphical user interface)  
-- CSV file for persistent data storage  
-- Git for version control  
+```
+Bash
+javac reisebuero/App.java
+```
+Start the program:
 
----
+```
+Bash
+java reisebuero.App
+```
 
-## Purpose of the Project
+🎓 Academic Context
+This software was created as a practical component of a project thesis in Business Informatics. The focus of the work was Object-Oriented Programming (OOP) as well as the application of non-functional requirements in Java.
 
-The purpose of this project is to demonstrate:
-
-- Basic object-oriented programming concepts
-- File handling in Java
-- Separation of data, business logic, and user interface
-- Simple and user-friendly interface design
-- Clean and structured code organization
-
-This application is developed for educational purposes only and does not represent a commercial system.
-
----
-
-## Notes
-
-This project is an individual university assignment.  
-All functionalities are implemented according to the official project specification.
+Author: David Gerliz
