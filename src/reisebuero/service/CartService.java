@@ -33,7 +33,7 @@ public class CartService {
         return sum;
     }
 
-    // Leert den Warenkorb (z.B. nach einer Buchung)
+    // Leert den Warenkorb
     public void clearCart() {
         cart.clear();
     }
